@@ -52,11 +52,11 @@
       if($("#div2").height()===1){
         $("#div2").height(oldDiv2)
         $("#div3").height($("#div3").height()-oldDiv2)
-        $("#drag2").slideDown()
+        $("#drag2").css("display","block")
       }else{
         $("#div2").height(1)
         $("#div3").height($("#div3").height()+oldDiv2)
-        $("#drag2").slideUp(0)
+        $("#drag2").css("display","none")
         $("#yuan").css("top","-20px")
       }
     })

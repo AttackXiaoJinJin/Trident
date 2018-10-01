@@ -15,7 +15,7 @@ html,body{
 
 #drag1{
   background-color: black;
-  height: 2px;
+  height: 5px;
   width: 100%;
   cursor:n-resize;
   position: absolute;
@@ -44,7 +44,7 @@ html,body{
 }
 #drag2{
   background-color: black;
-  height: 2px;
+  height: 5px;
   width: 100%;
   cursor:s-resize;
   position: absolute;

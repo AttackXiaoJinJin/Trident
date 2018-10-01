@@ -1,0 +1,60 @@
+html,body{
+  margin: 0 auto;
+}
+#main{
+  width: 100%;
+  height:100%;
+  position: absolute;
+}
+#div1{
+  /*border: 1px red solid;*/
+  width: 100%;
+  height:40%;
+  background-color: red;
+}
+
+#drag1{
+  background-color: black;
+  height: 2px;
+  width: 100%;
+  cursor:n-resize;
+  position: absolute;
+}
+
+#yuan{
+  height: 50px;
+  width: 50px;
+  background: greenyellow;
+  position: relative;
+  display: inline-block;
+  float: right;
+  border-radius: 50%;
+  margin-right: 10%;
+  top: -10%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#div2{
+  /*border:1px blue solid;*/
+  width: 100%;
+  height:20%;
+  background-color: blue;
+  /*position: relative;*/
+}
+#drag2{
+  background-color: black;
+  height: 2px;
+  width: 100%;
+  cursor:s-resize;
+  position: absolute;
+}
+#div3{
+  /*border:1px red solid;*/
+  width: 100%;
+  height: 40%;
+  background-color: yellow;
+
+}
+
+

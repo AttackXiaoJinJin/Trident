@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>分栏布局</title>
+  <link rel="stylesheet" href="分栏布局.css">
+
+</head>
+<body>
+<div id="main">
+    <div id="div1"></div>
+    <div id="drag1">
+
+    </div>
+    <div id="div2">
+      <span id="yuan"></span>
+    </div>
+    <div id="drag2"></div>
+    <div id="div3"></div>
+</div>
+<script src="../jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+  window.onload=function () {
+    let oldDiv2=$("#div2").height()-1
+    $( "#drag1" ).draggable({
+      axis: "y",
+      containment: "#main",
+      stop: function() {
+        $( "#div1" ).css("height",$( "#drag1" ).offset().top+"px")
+        $( "#drag1" ).css("top",$( "#drag1" ).offset().top+"px")
+        $( "#drag2" ).css("top",$( "#div2" ).offset().top+$( "#div2" ).height()+"px")
+        $( "#div3" ).css("height",$( "#main" ).height()-$( "#drag1" ).offset().top-$( "#div2" ).height()+"px")
+      }
+
+
+
+    })
+
+    $( "#drag2" ).draggable({
+      axis: "y",
+      containment: "#main",
+      stop: function() {
+        $( "#div1" ).css("height",$( "#drag2" ).offset().top-$( "#div2" ).height()+"px")
+        $( "#drag1" ).css("top",$( "#div2" ).offset().top+"px")
+        $( "#drag2" ).css("top",$( "#drag2" ).offset().top+"px")
+        $( "#div3" ).css("height",$( "#main" ).height()-$( "#drag2" ).offset().top+"px")
+      }
+    })
+
+    $("#yuan").click((e)=>{
+      if($("#div2").height()===1){
+        $("#div2").height(oldDiv2)
+        $("#div3").height($("#div3").height()-oldDiv2)
+        $("#drag2").slideDown()
+      }else{
+        $("#div2").height(1)
+        $("#div3").height($("#div3").height()+oldDiv2)
+        $("#drag2").slideUp(0)
+        $("#yuan").css("top","-20px")
+      }
+    })
+
+    
+
+
+
+  }
+</script>
+</body>
+</html>

@@ -23,3 +23,17 @@
 ![](https://upload-images.jianshu.io/upload_images/5518628-225ce9d8dde47fe3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/5518628-559389b34853b916.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+==============================================================
+**横向自定义滚动**
+需求：
+横向自定义滚动，带滚动条，鼠标滚轮也可触发；
+单个元素滚动，滚动过程中显示两边被隐藏元素个数
+
+原型图：
+
+![](https://upload-images.jianshu.io/upload_images/5518628-1c6c57513292ffd4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+效果图：
+
+![](https://upload-images.jianshu.io/upload_images/5518628-c673cd2dc71a5d48.gif?imageMogr2/auto-orient/strip)

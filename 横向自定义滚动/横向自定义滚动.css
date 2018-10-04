@@ -1,0 +1,101 @@
+html,body{
+  margin: 0 auto;
+}
+#all{
+  width: 600px;
+  height: 175px;
+  border: 1px red solid;
+  margin: 0 auto;
+  margin-top: 10%;
+  position: relative;
+}
+#main{
+  width: 600px;
+  height: 175px;
+  margin: 0 auto;
+  /*overflow: auto;*/
+  overflow: hidden;
+  position: relative;
+}
+
+#inner{
+  width: 1950px;
+  height: 150px;
+  /*overflow: auto;*/
+}
+
+#inner div{
+  float: left;
+  background: aqua;
+  width:150px;
+  height: 150px;
+  border-radius:50% ;
+  text-align: center;
+  line-height: 150px;
+}
+#main1{
+  background: aqua;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+#number1{
+  position: absolute;
+  width:40px;
+  height:40px;
+  background-color: yellow;
+  top:0;
+  right:0;
+  border-radius: 50%;
+}
+#number1Inner{
+  position: absolute;
+  top: -54px;
+  right: 11px
+}
+#main2{
+  float: left;
+  background: aqua;
+  width:150px;
+  height: 150px;
+  border-radius:50% ;
+  text-align: center;
+  line-height: 150px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top:0;
+}
+#number2{
+  position: absolute;
+  width:40px;
+  height:40px;
+  background-color: yellow;
+  top:0;
+  right:0;
+  border-radius: 50%;
+}
+#number2Inner{
+  position: absolute;
+  top: -54px;
+  right: 11px
+}
+
+#scroll{
+  width: 600px;
+  height: 20px;
+  background-color: antiquewhite;
+  position: absolute;
+  bottom: 0;
+}
+
+#scrollInner{
+  width: 0px;
+  height: 20px;
+  background-color: blue;
+}

@@ -9,9 +9,7 @@
 <body>
 <div id="main">
     <div id="div1"></div>
-    <div id="drag1">
-
-    </div>
+    <div id="drag1"></div>
     <div id="div2">
       <span id="yuan"></span>
     </div>
@@ -32,9 +30,6 @@
         $( "#drag2" ).css("top",$( "#div2" ).offset().top+$( "#div2" ).height()+"px")
         $( "#div3" ).css("height",$( "#main" ).height()-$( "#drag1" ).offset().top-$( "#div2" ).height()+"px")
       }
-
-
-
     })
 
     $( "#drag2" ).draggable({
@@ -60,10 +55,6 @@
         $("#yuan").css("top","-20px")
       }
     })
-
-    
-
-
 
   }
 </script>

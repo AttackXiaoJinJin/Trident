@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>横向自定义滚动</title>
+  <link rel="stylesheet" href="横向自定义滚动.css">
+</head>
+<body>
+<div id="all">
+<div id="main1">...
+  <div id="number1">
+    <span id="number1Inner">0</span>
+  </div>
+</div>
+<div id="main">
+
+  <div id="inner">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+  </div>
+
+</div>
+<div id="main2">...
+  <div id="number2">
+    <span id="number2Inner">10</span>
+  </div>
+</div>
+  <div id="scroll">
+    <div id="scrollInner"></div>
+  </div>
+</div>
+<script src="../jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+  window.onload=function () {
+    document.getElementById("main").onwheel=function(e){
+      e.preventDefault()
+      this.scrollLeft+=e.wheelDeltaY
+      // console.log(this.scrollLeft)
+      $("#main1").css("display",this.scrollLeft?"block":"none")
+      $("#main2").css("display",this.scrollLeft===1350?"none":"block")
+      let x=this.scrollLeft/150*(100/9)
+      $("#scrollInner").width(x+"%")
+      $("#number1Inner").text(this.scrollLeft/150+1)
+      $("#number2Inner").text(11-this.scrollLeft/150-1)
+    }
+  }
+</script>
+</body>
+</html>

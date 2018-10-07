@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>指定区域拖动</title>
+  <link rel="stylesheet" href="指定区域拖动.css">
+
+</head>
+<body>
+<div id="main">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr >
+      <td colspan="5"></td>
+      <!--<td></td>-->
+      <!--<td></td>-->
+      <!--<td></td>-->
+      <!--<td></td>-->
+    </tr>
+
+    <tr>
+      <td rowspan="3"></td>
+      <td></td>
+      <td rowspan="3" id="mainInner">
+        <div class="div1"><div class="circle1"></div></div>
+        <div class="div1"><div class="circle1"></div></div>
+        <div class="div1"><div class="circle1"></div></div>
+      </td>
+      <td></td>
+      <td rowspan="3"></td>
+    </tr>
+
+    <tr>
+      <!--<td></td>-->
+      <td></td>
+      <!--<td><div class="circle1">1</div></td>-->
+      <td></td>
+      <!--<td></td>-->
+    </tr>
+    <tr>
+      <!--<td></td>-->
+      <td></td>
+      <!--<td><div class="circle1">1</div></td>-->
+      <td></td>
+      <!--<td></td>-->
+    </tr>
+    <tr>
+      <td colspan="5"></td>
+      <!--<td></td>-->
+      <!--<td></td>-->
+      <!--<td></td>-->
+      <!--<td></td>-->
+    </tr>
+  </table>
+</div>
+<script src="../jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+  window.onload=function () {
+
+    $( ".circle1" ).draggable({
+      containment: "table",
+      start:function(){
+
+
+      },
+      drag: function() {
+        //不在可拖拽区域中，则禁止其拖动
+        let shang=$("#mainInner").offset().top-$(this).height()
+        let xia=$("#mainInner").offset().top+$("#mainInner").height()
+        let zuo=$("#mainInner").offset().left-$(this).width()
+        let you=$("#mainInner").offset().left+$("#mainInner").width()
+        let _this=this
+        if(_this.offsetTop<=shang||_this.offsetTop>=xia||_this.offsetLeft<=zuo||_this.offsetLeft>=you){
+          $(_this).draggable("disable");
+          $(_this).attr("class","circle2")
+        }else{
+          //否则拖回到可拖动位置，也允许其拖动
+          $(_this).attr("class","circle1")
+          $(_this).draggable("enable");
+        }
+        //end==============
+        $("body table tr td").css("background","aqua")
+        $(this).css("background","red")
+        $("#mainInner").css("background","white")
+
+      },
+      stop:function () {
+        $("body table tr td").css("background","white")
+        $("#mainInner").css("background","white")
+        $(this).css("background","blue")
+      },
+    });
+
+
+
+  }
+</script>
+</body>
+</html>

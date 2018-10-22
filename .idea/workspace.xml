@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e036338-b1ec-4751-9b2b-5a55a681bb07" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/弹出选择/cha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/弹出选择/gou.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/弹出选择/弹出选择.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/弹出选择/弹出选择.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,20 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="指定区域拖动.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
+      <file leaf-file-name="弹出选择.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+            <state relative-caret-position="308">
+              <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="指定区域拖动.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.css">
+      <file leaf-file-name="弹出选择.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="40" column="8" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="8" />
+            <state relative-caret-position="140">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -46,6 +47,11 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>trans</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,6 +67,8 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" />
         <option value="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" />
+        <option value="$PROJECT_DIR$/弹出选择/弹出选择.css" />
+        <option value="$PROJECT_DIR$/弹出选择/弹出选择.html" />
       </list>
     </option>
   </component>
@@ -75,8 +83,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="1110" />
-    <option name="height" value="1030" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -84,7 +93,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,17 +103,13 @@
             <path>
               <item name="Trident" type="b2602c69:ProjectViewProjectNode" />
               <item name="Trident" type="462c0819:PsiDirectoryNode" />
-              <item name="指定区域拖动" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Trident" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Trident" type="462c0819:PsiDirectoryNode" />
-              <item name="横向自定义滚动" type="462c0819:PsiDirectoryNode" />
+              <item name="弹出选择" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -119,6 +123,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Trident\弹出选择" />
       <recent name="F:\Trident" />
     </key>
   </component>
@@ -147,21 +152,25 @@
       <workItem from="1538360032200" duration="20349000" />
       <workItem from="1538526386449" duration="6767000" />
       <workItem from="1538620997845" duration="346000" />
-      <workItem from="1538905414979" duration="11707000" />
+      <workItem from="1538905414979" duration="12648000" />
+      <workItem from="1538961379642" duration="610000" />
+      <workItem from="1539142936845" duration="602000" />
+      <workItem from="1540190892416" duration="10278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39169000" />
+    <option name="totallyTimeSpent" value="51600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20013253" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20013253" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3287037" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -174,7 +183,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +192,48 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="22" selection-end-line="98" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="22" selection-end-line="98" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="22" lean-forward="true" selection-end-line="98" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="35" column="21" lean-forward="true" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
@@ -250,13 +300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/分栏布局/分栏布局.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/分栏布局/分栏布局.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -278,24 +321,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html">
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="42" selection-start-line="42" selection-end-line="43" selection-end-column="83" />
+        <state relative-caret-position="56">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/分栏布局/分栏布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="8" />
+        <state relative-caret-position="538">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
+    <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        <state relative-caret-position="308">
+          <caret line="42" selection-start-line="42" selection-end-line="43" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/弹出选择/gou.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
         </state>
       </provider>
     </entry>

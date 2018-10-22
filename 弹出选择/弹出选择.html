@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>弹出选择</title>
+  <link rel="stylesheet" href="弹出选择.css">
+</head>
+<body>
+<div id="main">
+  <div id="mainButton1">
+    <div id="inner1">99</div>
+    <div id="inner2">65</div>
+    <div id="inner3">16</div>
+    <img id="button1" src="gou.png"/>
+  </div>
+
+  <div id="mainButton12">
+    <div id="inner12">99</div>
+    <div id="inner22">65</div>
+    <div id="inner32">16</div>
+    <img id="button12" src="gou.png"/>
+  </div>
+</div>
+<script src="../jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+  window.onload=function(){
+    let flag1=true
+    let flag2=true
+    $("#button1").click(function(){
+      if(flag1){
+        $("#inner1").animate({right:'340px'})
+        $("#inner2").animate({right:'230px'})
+        $("#inner3").animate({right:'120px'})
+        $("#button1").attr("src","cha.png")
+        flag1=false
+      }else{
+        $("#inner1").animate({right:'0px'})
+        $("#inner2").animate({right:'0px'})
+        $("#inner3").animate({right:'0px'})
+        $("#button1").attr("src","gou.png")
+        flag1=true
+      }
+    })
+
+    $("#button12").click(function(){
+      if(flag2){
+        $("#inner12").animate({right:'80px',top:'120px'})
+        $("#inner22").animate({right:'120px'})
+        $("#inner32").animate({right:'80px',top:'-120px'})
+        $("#button12").attr("src","cha.png")
+        flag2=false
+      }else{
+        $("#inner12").animate({right:'0px',top:'0px'})
+        $("#inner22").animate({right:'0px'})
+        $("#inner32").animate({right:'0px',top:'0px'})
+        $("#button12").attr("src","gou.png")
+        flag2=true
+      }
+    })
+
+    
+
+  }
+</script>
+</body>
+</html>

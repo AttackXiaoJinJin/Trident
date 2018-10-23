@@ -15,6 +15,7 @@ table{
   border: 1px blue solid;
   border-spacing: 1px;
   background-color: black;
+  /*margin: 0 auto 10px auto;*/
   margin: 80px auto 10px auto;
   /*border-collapse:collapse;*/
 }
@@ -29,26 +30,20 @@ td{
   width:200px;
   height:80px;
 }
-.circle1{
+.circle1,.circle2{
   width: 80px;
   height: 80px;
   background: blue;
   border-radius: 50%;
   float: left;
   text-align: center;
+}
+.circle1{
   cursor:pointer
 }
 .circle2{
-  width: 80px;
-  height: 80px;
-  background: blue;
-  border-radius: 50%;
-  float: left;
-  text-align: center;
   cursor:not-allowed;
 }
-
-
 
 #mainInner .div1{
   width: 100%;

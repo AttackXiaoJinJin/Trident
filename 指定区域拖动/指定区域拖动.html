@@ -56,27 +56,36 @@
 <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script>
   window.onload=function () {
-
+    let startTop=0
+    let startLeft=0
+    let startTopNum=0
+    let startLeftNum=0
     $( ".circle1" ).draggable({
       containment: "table",
       start:function(){
+        startTop=$(this).css("top")
+        startLeft=$(this).css("left")
 
-
+        // console.log(startTop,"66")
       },
       drag: function() {
         //不在可拖拽区域中，则禁止其拖动
-        let shang=$("#mainInner").offset().top-$(this).height()
-        let xia=$("#mainInner").offset().top+$("#mainInner").height()
-        let zuo=$("#mainInner").offset().left-$(this).width()
-        let you=$("#mainInner").offset().left+$("#mainInner").width()
+        // let shang=$("#mainInner").offset().top-$(this).height()
+        // let shang=$("#mainInner").offset().top
+        // let xia=$("#mainInner").offset().top+$("#mainInner").height()
+        // let xia=$("#mainInner").offset().top
+        // let zuo=$("#mainInner").offset().left-$(this).width()
+        // let you=$("#mainInner").offset().left+$("#mainInner").width()
+        startTopNum=+$(this).css("top").substring(0,$(this).css("top").length-2)
+        startLeftNum=+$(this).css("left").substring(0,$(this).css("left").length-2)
         let _this=this
-        if(_this.offsetTop<=shang||_this.offsetTop>=xia||_this.offsetLeft<=zuo||_this.offsetLeft>=you){
-          $(_this).draggable("disable");
+        // if(_this.offsetTop<=shang||_this.offsetTop>=xia||_this.offsetLeft<=zuo||_this.offsetLeft>=you){
+        // console.log(+startTop.substring(0,startTop.length-2))
+        if(startTopNum<=0||startTopNum>=$("#mainInner").height()||startLeftNum<=0||startLeftNum>=$("#mainInner").width()-80){
           $(_this).attr("class","circle2")
         }else{
-          //否则拖回到可拖动位置，也允许其拖动
+          //否则允许其拖动
           $(_this).attr("class","circle1")
-          $(_this).draggable("enable");
         }
         //end==============
         $("body table tr td").css("background","aqua")
@@ -88,6 +97,18 @@
         $("body table tr td").css("background","white")
         $("#mainInner").css("background","white")
         $(this).css("background","blue")
+        
+        //如果在不可拖动区域内，则还原位置
+        // console.log(relativeTop,startTop)
+        if($(this).attr("class")==="circle2"){
+          $(this).css("top",startTop)
+          $(this).css("left",startLeft)
+
+          $(this).attr("class","circle1")
+        }
+
+
+
       },
     });
 

@@ -7,14 +7,15 @@
 </head>
 <body>
 <div id="main">
-  <div id="mainButton1">
+  <div id="mainButton1" tabindex="1">
     <div id="inner1">99</div>
     <div id="inner2">65</div>
     <div id="inner3">16</div>
     <img id="button1" src="gou.png"/>
+
   </div>
 
-  <div id="mainButton12">
+  <div id="mainButton12" tabindex="1">
     <div id="inner12">99</div>
     <div id="inner22">65</div>
     <div id="inner32">16</div>
@@ -27,8 +28,13 @@
   window.onload=function(){
     let flag1=true
     let flag2=true
+
     $("#button1").click(function(){
+      //让父组件获取焦点
+      console.log("点击button1")
       if(flag1){
+        //关键:展开时，获取焦点
+        $("#mainButton1")[0].focus()
         $("#inner1").animate({right:'340px'})
         $("#inner2").animate({right:'230px'})
         $("#inner3").animate({right:'120px'})
@@ -43,8 +49,32 @@
       }
     })
 
+    $("#inner1").click(function () {
+      console.log("inner1")
+    })
+
+    $("#inner2").click(function () {
+      console.log("inner2")
+    })
+
+    $("#inner3").click(function () {
+      console.log("inner3")
+    })
+
+    $("#mainButton1").blur(function(e){
+      console.log("mainButton1失去焦点")
+        $("#inner1").animate({right:'0px'})
+        $("#inner2").animate({right:'0px'})
+        $("#inner3").animate({right:'0px'})
+        $("#button1").attr("src","gou.png")
+        flag1=true
+    });
+
+    //==============================================
     $("#button12").click(function(){
       if(flag2){
+        //关键:展开时，获取焦点
+        $("#mainButton12")[0].focus()
         $("#inner12").animate({right:'80px',top:'120px'})
         $("#inner22").animate({right:'120px'})
         $("#inner32").animate({right:'80px',top:'-120px'})
@@ -59,7 +89,26 @@
       }
     })
 
-    
+    $("#inner12").click(function () {
+      console.log("inner12")
+    })
+
+    $("#inner22").click(function () {
+      console.log("inner22")
+    })
+
+    $("#inner32").click(function () {
+      console.log("inner32")
+    })
+
+
+    $("#mainButton12").blur(function(){
+        $("#inner12").animate({right:'0px',top:'0px'})
+        $("#inner22").animate({right:'0px'})
+        $("#inner32").animate({right:'0px',top:'0px'})
+        $("#button12").attr("src","gou.png")
+        flag2=true
+    });
 
   }
 </script>

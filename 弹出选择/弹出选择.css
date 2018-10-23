@@ -35,16 +35,16 @@ html,body{
   background-color:#B5E61D;
   top:0;
   display: block;
-
-
+  border:0;
 }
+
+#mainButton1,#mainButton12{
+  outline:medium;
+}
+
 #inner1,#inner2,#inner3,
 #inner12,#inner22,#inner32{
   position: absolute;
   background:#BCFDF8;
   top:0;
 }
-
-
-
-

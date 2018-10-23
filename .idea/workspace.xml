@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e036338-b1ec-4751-9b2b-5a55a681bb07" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/弹出选择/cha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/弹出选择/gou.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/弹出选择/弹出选择.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/弹出选择/弹出选择.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/弹出选择/弹出选择.css" beforeDir="false" afterPath="$PROJECT_DIR$/弹出选择/弹出选择.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/弹出选择/弹出选择.html" beforeDir="false" afterPath="$PROJECT_DIR$/弹出选择/弹出选择.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.css" beforeDir="false" afterPath="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html" beforeDir="false" afterPath="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,20 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="弹出选择.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.html">
+      <file leaf-file-name="横向自定义滚动.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+            <state relative-caret-position="280">
+              <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="弹出选择.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.css">
+      <file leaf-file-name="横向自定义滚动.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            <state relative-caret-position="622">
+              <caret line="98" column="14" lean-forward="true" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -62,13 +62,13 @@
         <option value="$PROJECT_DIR$/分栏布局/芬兰布局.html" />
         <option value="$PROJECT_DIR$/分栏布局/分栏布局.css" />
         <option value="$PROJECT_DIR$/分栏布局/分栏布局.html" />
-        <option value="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.css" />
-        <option value="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" />
         <option value="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" />
-        <option value="$PROJECT_DIR$/弹出选择/弹出选择.css" />
         <option value="$PROJECT_DIR$/弹出选择/弹出选择.html" />
+        <option value="$PROJECT_DIR$/弹出选择/弹出选择.css" />
+        <option value="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.css" />
+        <option value="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html" />
       </list>
     </option>
   </component>
@@ -103,7 +103,7 @@
             <path>
               <item name="Trident" type="b2602c69:ProjectViewProjectNode" />
               <item name="Trident" type="462c0819:PsiDirectoryNode" />
-              <item name="弹出选择" type="462c0819:PsiDirectoryNode" />
+              <item name="横向自定义滚动" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -155,12 +155,12 @@
       <workItem from="1538905414979" duration="12648000" />
       <workItem from="1538961379642" duration="610000" />
       <workItem from="1539142936845" duration="602000" />
-      <workItem from="1540190892416" duration="10278000" />
+      <workItem from="1540190892416" duration="18826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51600000" />
+    <option name="totallyTimeSpent" value="60148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -307,13 +307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="100" column="1" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -342,27 +335,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="42" selection-start-line="42" selection-end-line="43" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/弹出选择/gou.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.css">
+    <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="314">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.html">
+    <entry file="file://$PROJECT_DIR$/弹出选择/弹出选择.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        <state relative-caret-position="420">
+          <caret line="15" column="15" lean-forward="true" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="98" column="14" lean-forward="true" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
         </state>
       </provider>
     </entry>

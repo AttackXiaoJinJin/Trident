@@ -44,14 +44,24 @@
 <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script>
   window.onload=function () {
+    //根据数目，动态调整滚动条大小
+    $("#scrollInner").width(1/13*$("#scroll").width())
+    let y=$("#scrollInner").width()/$("#scroll").width()*100
     document.getElementById("main").onwheel=function(e){
       e.preventDefault()
       this.scrollLeft+=e.wheelDeltaY
       // console.log(this.scrollLeft)
       $("#main1").css("display",this.scrollLeft?"block":"none")
       $("#main2").css("display",this.scrollLeft===1350?"none":"block")
+
       let x=this.scrollLeft/150*(100/9)
-      $("#scrollInner").width(x+"%")
+      let z=x-y
+      if(x===0) z=0
+      // console.log(x,y)
+
+      $("#scrollInner").css("marginLeft",z+"%")
+
+
       $("#number1Inner").text(this.scrollLeft/150+1)
       $("#number2Inner").text(11-this.scrollLeft/150-1)
     }

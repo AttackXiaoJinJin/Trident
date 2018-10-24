@@ -24,23 +24,23 @@
         <div class="outerDiv1">
           <div class="div1">
             <!--<div class="hidden1"></div>-->
-            <div class="circle1">a</div>
-            <div class="circle1">b</div>
-            <div class="circle1">c</div>
+            <div class="circle1"><div class="innerCircle1">a</div></div>
+            <div class="circle1"><div class="innerCircle1">b</div></div>
+            <div class="circle1"><div class="innerCircle1">c</div></div>
           </div>
         </div>
         <div class="outerDiv1">
           <div class="div1">
-            <div class="circle1">d</div>
-            <div class="circle1">e</div>
-            <div class="circle1">f</div>
+            <div class="circle1"><div class="innerCircle1">d</div></div>
+            <div class="circle1"><div class="innerCircle1">e</div></div>
+            <div class="circle1"><div class="innerCircle1">f</div></div>
           </div>
         </div>
         <div class="outerDiv1">
           <div class="div1">
-            <div class="circle1">g</div>
-           <div class="circle1">h</div>
-            <div class="circle1">i</div>
+            <div class="circle1"><div class="innerCircle1">g</div></div>
+            <div class="circle1"><div class="innerCircle1">h</div></div>
+            <div class="circle1"><div class="innerCircle1">i</div></div>
           </div>
         </div>
       </td>
@@ -77,12 +77,11 @@
   window.onload=function () {
     let startTop=0
     let startLeft=0
-    let startTopNum=0
-    let startLeftNum=0
     let dragDiv=null
     let left=false
     let divWidth=$(".div1").width()
-    // console.log(divWidth)
+    console.log(divWidth)
+
     $(".circle1").draggable({
       containment: "table",
       revert: 'invalid',
@@ -92,17 +91,8 @@
         startLeft=$(this).css("left")
       },
       drag: function(e) {
-        //不在可拖拽区域中，则禁止其拖动
-        // startTopNum=+$(this).css("top").substring(0,$(this).css("top").length-2)
-        // startLeftNum=+$(this).css("left").substring(0,$(this).css("left").length-2)
         let _this=this
 
-        // if(startTopNum<=0||startTopNum>=$("#mainInner").height()||startLeftNum<=0||startLeftNum>=$("#mainInner").width()-80){
-        //   $(_this).attr("class","circle2")
-        // }else{
-        //   //否则允许其拖动
-        //   $(_this).attr("class","circle1")
-        // }
         $(_this).css("zIndex",2)
         //end==============
         $(this).css("background","red")
@@ -115,40 +105,91 @@
       },
       helper:
         function(event) {
+          // console.log($(event.target).find('div'))
           return $("<div class='circle3'>"+$(event.target).text()+"</div>")
       },
       stop:function (e,v) {
         $("body table tr td").css("background","white")
         $("#mainInner").css("background","white")
-        $(this).css("background","blue")
+        $(this).css("background","")
         $(this).css("zIndex",1)
 
       },
     }).droppable({
-
+      over: function(event,ui) {
+        if(left){
+        //   // $(this).css("marginLeft","30px")
+        //   // $(this).css("paddingLeft","30px")
+          $(this).css("paddingLeft","30px")
+        //   // $(this).addClass("beforeDiv")
+        //   $(this).children().css("marginLeft","30px")
+        //
+        }else{
+        //   // $(this).css("marginRight","30px")
+          $(this).css("paddingRight","30px")
+        //   $(this).addClass("afterDiv")
+        }
+        // console.log("1200")
+      },
+      out: function(event,ui) {
+        // // $(this).css("marginLeft","")
+        // // $(this).css("marginRight","")
+        $(this).css("paddingLeft","")
+        $(this).css("paddingRight","")
+        // console.log("1300")
+      },
       drop: function( event, ui ) {
-
+        console.log(left,"1340")
         $(this).find( "div" )
+        //从位置A拖动到位置B后，拖动前位置A的宽度由于元素个数超过100%，
+        // 拖后后元素个数不足，导致100%足够显示，所以要动态更新位置A的宽度
+        //30是提示插入的预留空间
+        let otherWidth=(dragDiv.parent().children().length-2)*80+20
+        // console.log(otherWidth,"drop")
+        // console.log(dragDiv.parent().children(),"drop")
+        if(otherWidth<=divWidth){
+          dragDiv.parent().width("100%")
+        }else{
+          dragDiv.parent().width((otherWidth+20)/divWidth*100+"%")
+        }
 
+        //==================================================
         dragDiv.css("top",0)
         dragDiv.css("left",0)
         dragDiv.css("visibility","visible")
         //判断是在前面插入还是在后面插入===
-        left?$(this).before(dragDiv):$(this).after(dragDiv)
-        //动态扩展========================
-        let trueWidth=$(this).parent().children().length*80
-        if(trueWidth>divWidth){
-          $(this).parent().width(trueWidth/divWidth*100+"%")
-        }
-        //================================
-        console.log($(this).parent().width(),"drop")
+        if(left){
+          //前面插入
+          $(this).before(dragDiv)
+          console.log("155555")
 
+        }else{
+          $(this).after(dragDiv)
+          console.log("159999")
+        }
+
+        // console.log($(this)[0],"148")
+        //动态扩展========================
+        let trueWidth=$(this).parent().children().length*80+20
+        if(trueWidth>divWidth){
+          $(this).parent().width((trueWidth+20)/divWidth*100+"%")
+        }else {
+          $(this).parent().width("100%")
+        }
+
+        //================================
+        // $(this).css("marginLeft","")
+        // $(this).css("marginRight","")
+        $(this).css("paddingLeft","")
+        $(this).css("paddingRight","")
+        //===========================
       },
-      hoverClass: "cd",
+   
+      // hoverClass: "cd",
     })
 
+    //向没有元素的区域，插入元素
     $(".div1").droppable({
-
       drop: function( event, ui ) {
         $(this).find( "div" )
         dragDiv.css("top",0)
@@ -157,9 +198,7 @@
         if($(this).children().length===0){
           $(this).append(dragDiv)
         }
-
       },
-      // hoverClass: "cd",
     })
 
 

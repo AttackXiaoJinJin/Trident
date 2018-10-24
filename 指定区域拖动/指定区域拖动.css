@@ -33,10 +33,8 @@ td{
 .circle1,.circle2{
   width: 80px;
   height: 80px;
-  background: blue;
   border-radius: 50%;
   float: left;
-  text-align: center;
 }
 .circle1{
   cursor:pointer
@@ -45,6 +43,16 @@ td{
 .circle2{
   cursor:not-allowed;
 }
+.innerCircle1{
+  width: 80px;
+  height: 80px;
+  background: blue;
+  border-radius: 50%;
+  float: left;
+  text-align: center;
+}
+
+
 .circle3{
   width: 80px;
   height: 80px;
@@ -65,7 +73,7 @@ td{
 #mainInner{
   position: relative;
 }
-#mainInner .div1{
+.div1{
   width: 100%;
   height: 80px;
   border: 1px black solid;
@@ -76,13 +84,26 @@ td{
 }
 
 .outerDiv1{
-  /*width: 100%;*/
   overflow-x: scroll;
-  /*position: relative;*/
 }
 
+
+
 .cd{
-  background:green !important;
+  /*background:green !important;*/
+  border: 1px green solid !important;
+  /*margin-right:30px !important;*/
+}
+
+.beforeDiv::before{
+  width:30px;
+  height:30px;
+
+}
+
+.afterDiv::after{
+  width:30px;
+  height:30px;
 
 }
 

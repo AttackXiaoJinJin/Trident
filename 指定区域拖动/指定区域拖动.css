@@ -40,16 +40,46 @@ td{
 }
 .circle1{
   cursor:pointer
+  /*cursor:text*/
 }
 .circle2{
   cursor:not-allowed;
 }
-
+.circle3{
+  width: 80px;
+  height: 80px;
+  background: red;
+  border-radius: 50%;
+  /*float: left;*/
+  text-align: center;
+  cursor:pointer;
+  /*position: absolute;*/
+  /*left:-80px;*/
+  /*top:-80px;!important;*/
+}
+#mainInner{
+  position: relative;
+}
 #mainInner .div1{
-  width: 100%;
+  width: 200%;
   height: 80px;
   border: 1px black solid;
+  line-height: 80px;
+  color:white;
+  /*position: absolute;*/
+  /*overflow: -webkit-paged-x;*/
+}
+
+.outerDiv1{
+  /*width: 100%;*/
+  overflow-x: scroll;
+  /*position: relative;*/
+}
+
+.cd{
+  background:green !important;
 
 }
 
+.div1 .ui-selecting { background: #FECA40; }
 

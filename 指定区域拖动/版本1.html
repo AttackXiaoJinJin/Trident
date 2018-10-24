@@ -38,7 +38,7 @@
         <div class="outerDiv1">
           <div class="div1">
             <div class="circle1">g</div>
-           <div class="circle1">h</div>
+            <div class="circle1">h</div>
             <div class="circle1">i</div>
           </div>
         </div>
@@ -79,12 +79,18 @@
     let startTopNum=0
     let startLeftNum=0
     let dragDiv=null
-    let left=false
-    
+    // $( ".div1" ).sortable({
+    //   revert: true
+    // })
+    // $( ".div1" ).disableSelection();
+    // $( ".div1" ).selectable()
+    // $( "#mainInner" ).selectable()
+
     $(".circle1").draggable({
       containment: "table",
+      // connectToSortable: '.div1'
+      // revert: true,
       revert: 'invalid',
-      opacity: 0.7,
       start:function(){
         startTop=$(this).css("top")
         startLeft=$(this).css("left")
@@ -102,48 +108,60 @@
         //   $(_this).attr("class","circle1")
         // }
         $(_this).css("zIndex",2)
-        // console.log(($(this).parent().children().last())[0])
-        // console.log($(this).parent().children().last().css('left'))
-        // console.log($(this).parent().children().last().find("div"))
+        // $(".div1").css("overflowX","")
+        // if(startTopNum/40>=0&&startLeftNum/40>=0){
+        //   $(this).css("cursor","text")
+        // }else{
+        //   $(this).css("cursor","pointer")
+        // }
+
         //end==============
         $(this).css("background","red")
+        // $(this).css("visibility","hidden")
         $("body table tr td").css("background","aqua")
         $("#mainInner").css("background","white")
         dragDiv=$(this)
-        left=$(this).parent().children().last().css('left')
-        left=+left.substring(0,left.length-2)<0
-        // console.log(left,"drag")
       },
       helper:
         function(event) {
-        let a=$(event.target)
-          // console.log($(a).css("top"),$(a).css("left"),"helper")
-          // console.log(event.target,"helper")
+          console.log($(this).css("top"),$(this).css("left"),"helper")
           return $("<div class='circle3'>"+$(event.target).text()+"</div>")
-      }
+        }
       ,
       stop:function (e,v) {
         $("body table tr td").css("background","white")
         $("#mainInner").css("background","white")
+        // $(".div1").css("overflowX","scroll")
         $(this).css("background","blue")
-        $(this).css("zIndex",1)
 
+        //如果在不可拖动区域内，则还原位置
+        // if($(this).attr("class")==="circle2"){
+        //   $(this).css("top",startTop)
+        //   $(this).css("left",startLeft)
+        //   $(this).attr("class","circle1")
+        // }
+
+        $(this).css("zIndex",1)
+        // console.log($(this),"ssss")
+        // $(this).remove()
       },
     }).droppable({
-
       drop: function( event, ui ) {
-
-        $(this).find( "div" )
+        // console.log($(this),"148")
+        $(this).addClass( "cd" ).find( "div" )
 
         dragDiv.css("top",0)
         dragDiv.css("left",0)
         dragDiv.css("visibility","visible")
-        console.log(left,"drop")
-        left?$(this).before(dragDiv):$(this).after(dragDiv)
 
-      },
-      hoverClass: "cd",
+        $(this).after(dragDiv)
+        // .clone().appendTo($(this));
+      }
+
+
+
     })
+
 
   }
 </script>

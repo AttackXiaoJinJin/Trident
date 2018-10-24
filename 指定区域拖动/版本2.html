@@ -23,7 +23,6 @@
       <td rowspan="3" id="mainInner">
         <div class="outerDiv1">
           <div class="div1">
-            <!--<div class="hidden1"></div>-->
             <div class="circle1">a</div>
             <div class="circle1">b</div>
             <div class="circle1">c</div>
@@ -39,7 +38,7 @@
         <div class="outerDiv1">
           <div class="div1">
             <div class="circle1">g</div>
-           <div class="circle1">h</div>
+            <div class="circle1">h</div>
             <div class="circle1">i</div>
           </div>
         </div>
@@ -81,8 +80,7 @@
     let startLeftNum=0
     let dragDiv=null
     let left=false
-    let divWidth=$(".div1").width()
-    // console.log(divWidth)
+
     $(".circle1").draggable({
       containment: "table",
       revert: 'invalid',
@@ -116,7 +114,7 @@
       helper:
         function(event) {
           return $("<div class='circle3'>"+$(event.target).text()+"</div>")
-      },
+        },
       stop:function (e,v) {
         $("body table tr td").css("background","white")
         $("#mainInner").css("background","white")
@@ -133,35 +131,12 @@
         dragDiv.css("top",0)
         dragDiv.css("left",0)
         dragDiv.css("visibility","visible")
-        //判断是在前面插入还是在后面插入===
+        console.log(left,"drop")
         left?$(this).before(dragDiv):$(this).after(dragDiv)
-        //动态扩展========================
-        let trueWidth=$(this).parent().children().length*80
-        if(trueWidth>divWidth){
-          $(this).parent().width(trueWidth/divWidth*100+"%")
-        }
-        //================================
-        console.log($(this).parent().width(),"drop")
 
       },
       hoverClass: "cd",
     })
-
-    $(".div1").droppable({
-
-      drop: function( event, ui ) {
-        $(this).find( "div" )
-        dragDiv.css("top",0)
-        dragDiv.css("left",0)
-        dragDiv.css("visibility","visible")
-        if($(this).children().length===0){
-          $(this).append(dragDiv)
-        }
-
-      },
-      // hoverClass: "cd",
-    })
-
 
   }
 </script>

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e036338-b1ec-4751-9b2b-5a55a681bb07" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/指定区域拖动/版本1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/指定区域拖动/版本2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" beforeDir="false" afterPath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" beforeDir="false" afterPath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" afterDir="false" />
     </list>
@@ -19,20 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="指定区域拖动.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="指定区域拖动.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="336">
+              <caret line="158" column="9" lean-forward="true" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="指定区域拖动.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="指定区域拖动.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="-339">
+              <caret line="64" column="11" lean-forward="true" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -69,8 +71,9 @@
         <option value="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html" />
         <option value="$PROJECT_DIR$/指定区域拖动/test.html" />
         <option value="$PROJECT_DIR$/指定区域拖动/版本1.html" />
-        <option value="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" />
+        <option value="$PROJECT_DIR$/指定区域拖动/版本2.html" />
         <option value="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" />
+        <option value="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" />
       </list>
     </option>
   </component>
@@ -83,7 +86,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -157,12 +160,12 @@
       <workItem from="1538905414979" duration="12648000" />
       <workItem from="1538961379642" duration="610000" />
       <workItem from="1539142936845" duration="602000" />
-      <workItem from="1540190892416" duration="56054000" />
+      <workItem from="1540190892416" duration="58306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97376000" />
+    <option name="totallyTimeSpent" value="99628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -355,24 +358,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/指定区域拖动/版本1.html">
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/版本2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+        <state relative-caret-position="538">
+          <caret line="143" column="7" selection-start-line="143" selection-start-column="7" selection-end-line="143" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/版本1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="510">
+          <caret line="146" column="8" lean-forward="true" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="-339">
+          <caret line="64" column="11" lean-forward="true" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/指定区域拖动/指定区域拖动.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="158" column="9" lean-forward="true" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

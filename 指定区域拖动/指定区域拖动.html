@@ -23,7 +23,9 @@
       <td rowspan="3" id="mainInner">
         <div class="outerDiv1">
           <div class="div1">
-            <!--<div class="hidden1"></div>-->
+            <!--circle1是外面透明的圆，innerCircle1是里面蓝色的圆，
+            这样嵌套是方便做插入提示
+            -->
             <div class="circle1"><div class="innerCircle1">a</div></div>
             <div class="circle1"><div class="innerCircle1">b</div></div>
             <div class="circle1"><div class="innerCircle1">c</div></div>
@@ -75,84 +77,102 @@
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>
   window.onload=function () {
-    let startTop=0
-    let startLeft=0
+    // let startTop=0
+    // let startLeft=0
+    //拖拽的元素
     let dragDiv=null
+    //在前面插还是在后面插
     let left=false
+    //该行的宽度，用于动态改变滚动条
+    //100%的宽度
     let divWidth=$(".div1").width()
-    console.log(divWidth)
+    // console.log(divWidth)
 
+    for(let i=0;i<500;i++){
+      $(".div1").append("<div class='circle1'><div class='innerCircle1'>"+i+9+"</div></div>")
+    }
+    //获取div行上的元素个数
+    // ($(".div1").children().length-2)*80+20
+    let nowWidth=($(".div1").children().length/3)*80+20
+    // console.log($(".div1").children().length)
+    $(".div1").width(nowWidth/divWidth*100+"%")
+
+    //拖动父圆
     $(".circle1").draggable({
       containment: "table",
       revert: 'invalid',
       opacity: 0.7,
       start:function(){
-        startTop=$(this).css("top")
-        startLeft=$(this).css("left")
+        // startTop=$(this).css("top")
+        // startLeft=$(this).css("left")
       },
+      //拖拽ing的函数
       drag: function(e) {
         let _this=this
-
+        //让其显示在其他元素之上
         $(_this).css("zIndex",2)
         //end==============
+        //提供拖拽元素的视觉支持
         $(this).css("background","red")
         $("body table tr td").css("background","aqua")
         $("#mainInner").css("background","white")
         dragDiv=$(this)
+        //判断是前插还是后插
         left=$(this).parent().children().last().css('left')
         left=+left.substring(0,left.length-2)<0
         // console.log(left,"drag")
       },
       helper:
         function(event) {
-          // console.log($(event.target).find('div'))
+          //提供拖拽元素的视觉提示
           return $("<div class='circle3'>"+$(event.target).text()+"</div>")
       },
       stop:function (e,v) {
+        //拖拽结束后的样式操作
         $("body table tr td").css("background","white")
         $("#mainInner").css("background","white")
         $(this).css("background","")
         $(this).css("zIndex",1)
 
       },
-    }).droppable({
+    })
+      //插入函数
+      .droppable({
+        //拖拽元素在其他元素之上，其他元素的样式
       over: function(event,ui) {
         if(left){
-        //   // $(this).css("marginLeft","30px")
-        //   // $(this).css("paddingLeft","30px")
+          //父圆的padding设置，起到提示可插入的效果
           $(this).css("paddingLeft","30px")
-        //   // $(this).addClass("beforeDiv")
-        //   $(this).children().css("marginLeft","30px")
-        //
         }else{
-        //   // $(this).css("marginRight","30px")
           $(this).css("paddingRight","30px")
-        //   $(this).addClass("afterDiv")
         }
-        // console.log("1200")
       },
       out: function(event,ui) {
         // // $(this).css("marginLeft","")
         // // $(this).css("marginRight","")
+        //不在悬浮，不显示插入效果
         $(this).css("paddingLeft","")
         $(this).css("paddingRight","")
         // console.log("1300")
       },
       drop: function( event, ui ) {
         console.log(left,"1340")
+        //找到被插入的元素
         $(this).find( "div" )
         //从位置A拖动到位置B后，拖动前位置A的宽度由于元素个数超过100%，
         // 拖后后元素个数不足，导致100%足够显示，所以要动态更新位置A的宽度
         //30是提示插入的预留空间
         let otherWidth=(dragDiv.parent().children().length-2)*80+20
-        // console.log(otherWidth,"drop")
+        // console.log(otherWidth,"drop") //40180
+        // console.log(divWidth,"drop") //40180
         // console.log(dragDiv.parent().children(),"drop")
+        //滚动条显示
         if(otherWidth<=divWidth){
+          // console.log("aaaa167")
           dragDiv.parent().width("100%")
         }else{
           dragDiv.parent().width((otherWidth+20)/divWidth*100+"%")
         }
-
         //==================================================
         dragDiv.css("top",0)
         dragDiv.css("left",0)
@@ -161,34 +181,31 @@
         if(left){
           //前面插入
           $(this).before(dragDiv)
-          console.log("155555")
-
+          // console.log("155555")
         }else{
           $(this).after(dragDiv)
-          console.log("159999")
+          // console.log("159999")
         }
-
         // console.log($(this)[0],"148")
         //动态扩展========================
         let trueWidth=$(this).parent().children().length*80+20
         if(trueWidth>divWidth){
           $(this).parent().width((trueWidth+20)/divWidth*100+"%")
         }else {
+          // console.log("bbbb194")
           $(this).parent().width("100%")
         }
 
         //================================
-        // $(this).css("marginLeft","")
-        // $(this).css("marginRight","")
         $(this).css("paddingLeft","")
         $(this).css("paddingRight","")
         //===========================
       },
-   
       // hoverClass: "cd",
     })
 
     //向没有元素的区域，插入元素
+    //空行的情况下，插入一个元素
     $(".div1").droppable({
       drop: function( event, ui ) {
         $(this).find( "div" )
@@ -200,7 +217,6 @@
         }
       },
     })
-
 
   }
 </script>

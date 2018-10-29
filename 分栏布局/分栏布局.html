@@ -8,27 +8,60 @@
 </head>
 <body>
 <div id="main">
+    <!--红-->
     <div id="div1"></div>
+    <!--红蓝拖拽线-->
     <div id="drag1"></div>
+    <!--蓝-->
     <div id="div2">
       <span id="yuan"></span>
     </div>
+    <!--蓝黄拖拽线-->
     <div id="drag2"></div>
+    <!--黄-->
     <div id="div3"></div>
 </div>
-<script src="../jquery.min.js"></script>
-<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<!--<script src="../jquery.min.js"></script>-->
+<!--<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script>
   window.onload=function () {
     let oldDiv2=$("#div2").height()-1
+
+
+    let mainHeight=$("#main").height()
+    let startBlueHeight=$("#div2").height()
+    let drag1Hegiht=5
+    console.log(mainHeight)
     $( "#drag1" ).draggable({
       axis: "y",
       containment: "#main",
       stop: function() {
-        $( "#div1" ).css("height",$( "#drag1" ).offset().top+"px")
-        $( "#drag1" ).css("top",$( "#drag1" ).offset().top+"px")
-        $( "#drag2" ).css("top",$( "#div2" ).offset().top+$( "#div2" ).height()+"px")
-        $( "#div3" ).css("height",$( "#main" ).height()-$( "#drag1" ).offset().top-$( "#div2" ).height()+"px")
+        //获取红蓝黄高度
+        let RedHeight=$("#div1").height()
+        let BlueHeight=$("#div2").height()
+        let YellowHeight=$("#div3").height()
+        let drag1Top=$( "#drag1" ).offset().top
+        let div2Top=$( "#div2" ).offset().top
+        console.log(drag1Top)
+        console.log(mainHeight)
+
+        if(drag1Top+drag1Hegiht+BlueHeight>mainHeight){
+          console.log("42")
+          $( "#div1" ).css("height",mainHeight-BlueHeight-2+"px")
+          $( "#drag1" ).css("top",mainHeight-BlueHeight-2+"px")
+          $( "#drag2" ).css("top",mainHeight+"px")
+          $( "#div3" ).css("height","1px")
+        }else{
+          // console.log($( "#div2" ).offset().top)
+          $( "#div1" ).css("height",drag1Top+"px")
+          $( "#drag1" ).css("top",drag1Top+"px")
+
+          $( "#drag2" ).css("top",drag1Top+BlueHeight-1+"px")
+          $( "#div3" ).css("height",mainHeight-drag1Top-BlueHeight+"px")
+        }
+
       }
     })
 
@@ -44,11 +77,21 @@
     })
 
     $("#yuan").click((e)=>{
+      let BlueHeight=$("#div2").height()
+      let drag1Top=$( "#drag1" ).offset().top
+      //展开
       if($("#div2").height()===1){
-        $("#div2").height(oldDiv2)
-        $("#div3").height($("#div3").height()-oldDiv2)
+        if(drag1Top+drag1Hegiht+BlueHeight>mainHeight){
+          $("#div1").height(mainHeight-startBlueHeight)
+          $( "#drag1" ).css("top",mainHeight-startBlueHeight+"px")
+        }else{
+          $("#div3").height($("#div3").height()-oldDiv2)
+        }
         $("#drag2").css("display","block")
-      }else{
+        $("#div2").height(oldDiv2)
+      }
+      //收缩
+      else{
         $("#div2").height(1)
         $("#div3").height($("#div3").height()+oldDiv2)
         $("#drag2").css("display","none")

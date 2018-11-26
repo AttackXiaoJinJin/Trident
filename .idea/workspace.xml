@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e036338-b1ec-4751-9b2b-5a55a681bb07" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/allin/allin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allin/allin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allin/jquery-ui-1.10.4.custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allin/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allin/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" beforeDir="false" afterPath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" beforeDir="false" afterPath="$PROJECT_DIR$/指定区域拖动/指定区域拖动.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html" beforeDir="false" afterPath="$PROJECT_DIR$/横向自定义滚动/横向自定义滚动.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allin/allin.html" beforeDir="false" afterPath="$PROJECT_DIR$/allin/allin.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +19,8 @@
       <file leaf-file-name="allin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/allin/allin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="475" column="34" lean-forward="true" selection-start-line="475" selection-start-column="34" selection-end-line="475" selection-end-column="34" />
+            <state relative-caret-position="221">
+              <caret line="439" column="56" selection-start-line="439" selection-start-column="56" selection-end-line="439" selection-end-column="56" />
               <folding>
                 <element signature="e#910#1922#0" />
                 <element signature="e#1341#1604#0" />
@@ -216,18 +207,18 @@
       <workItem from="1540190892416" duration="73449000" />
       <workItem from="1540516780622" duration="7005000" />
       <workItem from="1540785493056" duration="642000" />
-      <workItem from="1543195283802" duration="20144000" />
+      <workItem from="1543195283802" duration="21001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142562000" />
+    <option name="totallyTimeSpent" value="143419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19814447" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19814447" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3287037" />
@@ -538,8 +529,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/allin/allin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="475" column="34" lean-forward="true" selection-start-line="475" selection-start-column="34" selection-end-line="475" selection-end-column="34" />
+        <state relative-caret-position="221">
+          <caret line="439" column="56" selection-start-line="439" selection-start-column="56" selection-end-line="439" selection-end-column="56" />
           <folding>
             <element signature="e#910#1922#0" />
             <element signature="e#1341#1604#0" />

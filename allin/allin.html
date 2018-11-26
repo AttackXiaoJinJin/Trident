@@ -434,27 +434,29 @@
     let dataNum=60
     //数据宽 40
     let datawidth=40
+    let shownum=33
+    //33表示 显示33个
+    //初始化文字
+    $("#div2inner1-number2Inner").text(dataNum-shownum+1)
+
     for(let i=0;i<dataNum;i++){
       $("#div2inner1-inner").append("<div>"+(i+1)+"</div>")
     }
-
     // console.log(scrollwidth)
     $("#div2inner1-inner").width(datawidth*dataNum)
     // $("#div2inner1-main").width($("#div2inner1-all").width())
-    let shownum=33
-    //33表示 显示33个
+
     $("#div2inner1-all").width(datawidth*shownum)
     $("#div2inner1-main").width(datawidth*shownum)
-
 
     //根据数目，动态调整滚动条大小
     // $("#div2inner1-scrollInner").width(1/dataNum*$("#div2inner1-scroll").width())
     $("#div2inner1-scrollInner").width(1/(shownum-5)*$("#div2inner1-scroll").width())
-    console.log($("#div2inner1-scrollInner").width()) //41
+    // console.log($("#div2inner1-scrollInner").width()) //41
     //滚动条占总宽的百分比
     // let y=$("#div2inner1-scrollInner").width()/$("#div2inner1-scroll").width()*100
     let y=100/(shownum-5)
-    console.log(y) //3
+    // console.log(y) //3
     // let y=0
 
     document.getElementById("div2inner1-main").onwheel=function(e){
@@ -471,8 +473,8 @@
         // console.log(22222)
       }
 
-      // $("#div2inner1-main1").css("display",this.scrollLeft?"block":"none")
-      // $("#div2inner1-main2").css("display",this.scrollLeft===1350?"none":"block")
+      $("#div2inner1-main1").css("display",this.scrollLeft?"block":"none")
+      $("#div2inner1-main2").css("display",this.scrollLeft===datawidth*(shownum-6)?"none":"block")
       console.log(this.scrollLeft)
 
       // let x=this.scrollLeft/40*(100/(dataNum-4))
@@ -481,14 +483,13 @@
       let x=(this.scrollLeft/datawidth)*y
       // let z=x-y
       if(this.scrollLeft===0) x=0
-      console.log(this.scrollLeft/datawidth)
+      // console.log(this.scrollLeft/datawidth)
       //滚动条滑动
       $("#div2inner1-scrollInner").css("marginLeft",x+"%")
-      // $("#div2inner1-scrollInner").css("marginLeft",y+"px")
-
 
       $("#div2inner1-number1Inner").text(this.scrollLeft/datawidth+1)
-      $("#div2inner1-number2Inner").text((dataNum-2)-this.scrollLeft/datawidth-1)
+      // console.log(shownum,this.scrollLeft)
+      $("#div2inner1-number2Inner").text(shownum-5-this.scrollLeft/datawidth)
     }
 
 

@@ -1,0 +1,304 @@
+html,body{
+  margin: 0 auto;
+}
+ul,li{
+  padding:0;
+  margin:0;
+  list-style:none；
+}
+
+body{
+  background: #81746C;
+
+}
+#allin{
+  margin: 10px;
+  background: #DDEEF6;
+
+
+}
+
+#head{
+  height:80px;
+  width: 100%;
+  background: #DDEEF6;
+}
+
+#main{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  overflow: hidden;
+}
+#div1{
+  /*border: 1px red solid;*/
+  width: 100%;
+  height:60%;
+  background-color: #E8F0F0;
+  overflow: auto;
+}
+#div1 table{
+  width:100%;
+  font-size:18px;
+  table-layout:fixed;
+  empty-cells:show;
+  border-collapse: collapse;
+  margin:0 auto;
+  border:1px solid #cad9ea;
+  color:#666;
+}
+
+#div1 table tr td {
+  height:40px;
+  border:1px solid #cad9ea;
+  padding:0;
+}
+#div1 table tr:nth-child(even) {
+  background-color:#f5fafe;
+}
+/*拖拽区域==========================*/
+.mainInner{
+  position: relative;
+  border: none;
+}
+.outerDiv1{
+  overflow-x: scroll;
+}
+.innerdiv1{
+  width: 100%;
+  height: 40px;
+  border: 1px black solid;
+  line-height: 40px;
+  color:white;
+  /*position: absolute;*/
+  /*overflow: -webkit-paged-x;*/
+}
+
+.circle1{
+  /*width: 20px;*/
+  width: 30px;
+  /*height: 20px;*/
+  height: 100%;
+  border-radius: 50%;
+  float: left;
+  cursor:pointer
+}
+
+.innerCircle1{
+  width: 30px;
+  /*width: 100%;*/
+  /*height: 20px;*/
+  height: 100%;
+  background: blue;
+  border-radius: 50%;
+  float: left;
+  text-align: center;
+}
+.circle3{
+  width: 30px;
+  height:40px;
+  background: red;
+  border-radius: 50%;
+  /*float: left;*/
+  text-align: center;
+  cursor:pointer;
+  /*position: absolute;*/
+  /*left:-80px;*/
+  /*top:-80px;!important;*/
+}
+
+/*拖拽区域end========================*/
+
+.red{
+  background: red;
+}
+
+.blue{
+  background: blue;
+}
+
+.green{
+  background: green;
+}
+
+#drag1{
+  background-color: black;
+  height: 5px;
+  width: 100%;
+  cursor:n-resize;
+  position: absolute;
+}
+
+#yuan{
+  height: 50px;
+  width: 50px;
+  background: greenyellow;
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  top: -50%;
+  cursor: pointer;
+  z-index: 1;
+  right: 5%;
+}
+
+#div2{
+  /*border:1px blue solid;*/
+  width: 100%;
+  height:10%;
+  /*background-color: blue;*/
+  position: relative;
+}
+#drag2{
+  background-color: black;
+  height: 5px;
+  width: 100%;
+  cursor:s-resize;
+  position: absolute;
+
+}
+#div2inner1{
+  background: #E8F0F0;
+  width: 100%;
+  height: 45%;
+  margin-top: 5px;
+}
+#div2inner1-div1{
+  float: left;
+}
+#div2inner1-div2{
+  float: right;
+}
+
+#div2inner1 .span1{
+  border: 3px red solid;
+  padding: 5px;
+  display: inline-block;
+  color: red;
+  font-weight: bold;
+}
+#div2inner1 .span2{
+  /*border: 3px red solid;*/
+  padding: 5px;
+  display: inline-block;
+  color: white;
+  background: green;
+  font-weight: bold;
+}
+/*中间横向滚动start===========================*/
+#div2inner1-all{
+  height: 40px;
+  border: 1px red solid;
+  margin: 0 auto;
+  /*margin-top: 10%;*/
+  position: absolute;
+  left: 15%;
+}
+#div2inner1-main{
+  /*width: 600px;*/
+  width: 1300px;
+  height: 40px;
+  margin: 0 auto;
+  /*overflow: auto;*/
+  overflow: hidden;
+  position: relative;
+}
+
+#div2inner1-inner{
+  width: 100%;
+  height: 40px;
+  /*overflow: auto;*/
+}
+
+#div2inner1-inner div{
+  float: left;
+  background: aqua;
+  width:40px;
+  height: 40px;
+  border-radius:50% ;
+  text-align: center;
+  line-height: 40px;
+}
+#div2inner1-main1{
+  background: aqua;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+#div2inner1-number1{
+  position: absolute;
+  width:40px;
+  height:40px;
+  background-color: yellow;
+  top:0;
+  right:0;
+  border-radius: 50%;
+}
+#div2inner1-number1Inner{
+  position: absolute;
+  top: -54px;
+  right: 11px
+}
+#div2inner1-main2{
+  float: left;
+  background: aqua;
+  width:40px;
+  height: 40px;
+  border-radius:50% ;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top:0;
+}
+#div2inner1-number2{
+  position: absolute;
+  width:40px;
+  height:40px;
+  background-color: yellow;
+  top:0;
+  right:0;
+  border-radius: 50%;
+}
+#div2inner1-number2Inner{
+  position: absolute;
+  top: -54px;
+  right: 11px
+}
+
+#div2inner1-scroll{
+  width: 100%;
+  height: 5px;
+  background-color: antiquewhite;
+  position: absolute;
+  bottom: 0;
+}
+
+#div2inner1-scrollInner{
+  width: 20px;
+  height: 5px;
+  background-color: blue;
+}
+/*中间横向滚动end===========================*/
+
+#div2inner2{
+  background: #F5FaFE;
+  width: 100%;
+  height: 45%;
+}
+
+#div3{
+  /*border:1px red solid;*/
+  width: 100%;
+  height: 30%;
+  background-color: yellow;
+
+}
+
+

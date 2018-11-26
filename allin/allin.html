@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>allin</title>
+  <link rel="stylesheet" href="allin.css">
+
+</head>
+<body>
+
+  <!--<div id="head">-->
+    <!--这是头部布局-->
+  <!--</div>-->
+  <div id="main">
+    <!--红-->
+    <div id="div1">
+      <table>
+        <tr>
+          <td>aaa：</td>
+          <td>aaa：</td>
+          <td>aaa：</td>
+          <!--<td rowspan="16" id="mainInner">-->
+          <td class="mainInner">
+            <div class="outerDiv1">
+              <div class="innerdiv1">
+                <!--circle1是外面透明的圆，innerCircle1是里面蓝色的圆，
+                这样嵌套是方便做插入提示
+                -->
+                <div class="circle1"><div class="innerCircle1">a</div></div>
+                <div class="circle1"><div class="innerCircle1">b</div></div>
+                <div class="circle1"><div class="innerCircle1">c</div></div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>bbb：</td>
+          <td>bbb：</td>
+          <td>bbb：</td>
+          <td class="mainInner">
+            <div class="outerDiv1">
+              <div class="innerdiv1">
+                <div class="circle1"><div class="innerCircle1">d</div></div>
+                <div class="circle1"><div class="innerCircle1">e</div></div>
+                <div class="circle1"><div class="innerCircle1">f</div></div>
+              </div>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>ccc：</td>
+          <td>ccc：</td>
+          <td>ccc：</td>
+          <td class="mainInner">
+            <div class="outerDiv1">
+              <div class="innerdiv1">
+                <div class="circle1"><div class="innerCircle1">g</div></div>
+                <div class="circle1"><div class="innerCircle1">h</div></div>
+                <div class="circle1"><div class="innerCircle1">i</div></div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>ddd：</td>
+          <td>ddd：</td>
+          <td>ddd：</td>
+          <!--<td>-->
+          <!--</td>-->
+        </tr>
+        <tr>
+          <td>eee：</td>
+          <td>eee：</td>
+          <td>eee：</td>
+          <!--<td>-->
+          <!--</td>-->
+        </tr>
+        <tr>
+          <td>fff：</td>
+          <td>fff：</td>
+          <td>fff：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>ggg：</td>
+          <td>ggg：</td>
+          <td>ggg：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>hhh：</td>
+          <td>hhh：</td>
+          <td>hhh：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>iii：</td>
+          <td>iii：</td>
+          <td>iii：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>jjj：</td>
+          <td>jjj：</td>
+          <td>jjj：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>k：</td>
+          <td>k：</td>
+          <td>k：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>lll：</td>
+          <td>lll：</td>
+          <td>lll：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>mmm：</td>
+          <td>mmm：</td>
+          <td>mmm：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>nnn：</td>
+          <td>nnn：</td>
+          <td>nnn：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>ooo：</td>
+          <td>ooo：</td>
+          <td>ooo：</td>
+          <!--<td></td>-->
+        </tr>
+        <tr>
+          <td>ppp：</td>
+          <td>ppp：</td>
+          <td>ppp：</td>
+          <!--<td></td>-->
+        </tr>
+
+
+      </table>
+
+    </div>
+    <!--红蓝拖拽线-->
+    <div id="drag1"></div>
+    <!--蓝-->
+    <div id="div2">
+      <span id="yuan"></span>
+      <div id="div2inner1">
+        <div id="div2inner1-div1">
+        <span class="span1">鼻科[17]</span>
+        <span class="span2">1</span>
+        <span class="span2">2</span>
+        <span class="span2">3</span>
+        <span class="span2">4</span>
+        <span class="span2">5</span>
+        <span class="span2">6</span>
+        <span class="span2">7</span>
+        <span class="span2">8</span>
+        </div>
+<!--==================================================-->
+        <div id="div2inner1-all">
+          <div id="div2inner1-main1">...
+            <div id="div2inner1-number1">
+              <span id="div2inner1-number1Inner">0</span>
+            </div>
+          </div>
+          <div id="div2inner1-main">
+
+            <div id="div2inner1-inner">
+            </div>
+
+          </div>
+          <div id="div2inner1-main2">...
+            <div id="div2inner1-number2">
+              <span id="div2inner1-number2Inner">10</span>
+            </div>
+          </div>
+          <div id="div2inner1-scroll">
+            <div id="div2inner1-scrollInner"></div>
+          </div>
+        </div>
+
+<!--===========================================-->
+        <div id="div2inner1-div2">
+        <span class="span2">1</span>
+        <span class="span2">2</span>
+        <span class="span2">3</span>
+        <span class="span2">4</span>
+        <span class="span2">5</span>
+        <span class="span2">6</span>
+        <span class="span2">7</span>
+        <span class="span2">8</span>
+        <span class="span1">鼻科[17]</span>
+        </div>
+      </div>
+
+      <div id="div2inner2">
+
+
+      </div>
+
+    </div>
+    <!--蓝黄拖拽线-->
+    <div id="drag2"></div>
+    <!--黄-->
+    <div id="div3"></div>
+  </div>
+
+
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script>
+  window.onload=function () {
+    //折叠start================================================
+    let oldDiv2=$("#div2").height()-1
+    let mainHeight=$("#main").height()
+    let startBlueHeight=$("#div2").height()
+    let drag1Hegiht=5
+    // console.log(mainHeight)
+    $( "#drag1" ).draggable({
+      axis: "y",
+      containment: "#main",
+      stop: function() {
+        //获取红蓝黄高度
+        let RedHeight=$("#div1").height()
+        let BlueHeight=$("#div2").height()
+        let YellowHeight=$("#div3").height()
+        let drag1Top=$( "#drag1" ).offset().top
+        let div2Top=$( "#div2" ).offset().top
+        console.log(drag1Top)
+        console.log(mainHeight)
+
+        if(drag1Top+drag1Hegiht+BlueHeight>mainHeight){
+          console.log("42")
+          $( "#div1" ).css("height",mainHeight-BlueHeight-2+"px")
+          $( "#drag1" ).css("top",mainHeight-BlueHeight-2+"px")
+          $( "#drag2" ).css("top",mainHeight+"px")
+          $( "#div3" ).css("height","1px")
+        }else{
+          // console.log($( "#div2" ).offset().top)
+          $( "#div1" ).css("height",drag1Top+"px")
+          $( "#drag1" ).css("top",drag1Top+"px")
+
+          $( "#drag2" ).css("top",drag1Top+BlueHeight-1+"px")
+          $( "#div3" ).css("height",mainHeight-drag1Top-BlueHeight+"px")
+        }
+
+      }
+    })
+
+    $( "#drag2" ).draggable({
+      axis: "y",
+      containment: "#main",
+      stop: function() {
+        $( "#div1" ).css("height",$( "#drag2" ).offset().top-$( "#div2" ).height()+"px")
+        $( "#drag1" ).css("top",$( "#div2" ).offset().top+"px")
+        $( "#drag2" ).css("top",$( "#drag2" ).offset().top+"px")
+        $( "#div3" ).css("height",$( "#main" ).height()-$( "#drag2" ).offset().top+"px")
+      }
+    })
+
+    $("#yuan").click((e)=>{
+      let BlueHeight=$("#div2").height()
+      let drag1Top=$( "#drag1" ).offset().top
+      //展开
+      if($("#div2").height()===1){
+        if(drag1Top+drag1Hegiht+BlueHeight>mainHeight){
+          $("#div1").height(mainHeight-startBlueHeight)
+          $( "#drag1" ).css("top",mainHeight-startBlueHeight+"px")
+        }else{
+          $("#div3").height($("#div3").height()-oldDiv2)
+        }
+        $("#drag2").css("display","block")
+        $("#div2").height(oldDiv2)
+      }
+      //收缩
+      else{
+        $("#div2").height(1)
+        $("#div3").height($("#div3").height()+oldDiv2)
+        $("#drag2").css("display","none")
+        $("#yuan").css("top","-20px")
+      }
+    })
+
+    //折叠end======================================================
+
+  //  拖拽圆start================================================
+    //拖拽的元素
+    let dragDiv=null
+    //在前面插还是在后面插
+    let left=false
+    //该行的宽度，用于动态改变滚动条
+    //100%的宽度
+    let divWidth=$(".innerdiv1").width()
+    // console.log(divWidth)
+
+    for(let i=0;i<30;i++){
+      $(".innerdiv1").append("<div class='circle1'><div class='innerCircle1'>"+i+9+"</div></div>")
+    }
+
+    //获取div行上的元素个数
+    // ($(".div1").children().length-2)*30+20
+    let nowWidth=($(".innerdiv1").children().length/3)*30+20
+    // console.log($(".div1").children().length)
+    $(".innerdiv1").width(nowWidth/divWidth*100+"%")
+
+    //拖动父圆
+    $(".circle1").draggable({
+      containment: "table",
+      revert: 'invalid',
+      opacity: 0.7,
+      start:function(){
+      },
+      //拖拽ing的函数
+      drag: function(e) {
+        // let _this=this
+        //让其显示在其他元素之上
+        $(this).css("zIndex",2)
+        //end==============
+        //提供拖拽元素的视觉支持
+        // console.log($(this))
+        // $(this).css("background","red")
+        // $("body table tr td").css("background","aqua")
+        // $(".mainInner").css("background","white")
+        dragDiv=$(this)
+        //判断是前插还是后插
+        left=$(this).parent().children().last().css('left')
+        left=+left.substring(0,left.length-2)<0
+        // console.log(left,"drag")
+      },
+      helper:
+        function(event) {
+          //提供拖拽元素的视觉提示
+          return $("<div class='circle3'>"+$(event.target).text()+"</div>")
+        },
+      stop:function (e,v) {
+        //拖拽结束后的样式操作
+        // $("body table tr td").css("background","white")
+        // $(".mainInner").css("background","white")
+        // $(this).css("background","")
+        $(this).css("zIndex",1)
+      },
+    })
+    //插入函数
+      .droppable({
+        //拖拽元素在其他元素之上，其他元素的样式
+        over: function(event,ui) {
+          if(left){
+            //父圆的padding设置，起到提示可插入的效果
+            $(this).css("paddingLeft","20px")
+          }else{
+            $(this).css("paddingRight","20px")
+          }
+        },
+        out: function(event,ui) {
+          //不在悬浮，不显示插入效果
+          $(this).css("paddingLeft","")
+          $(this).css("paddingRight","")
+          // console.log("1300")
+        },
+        drop: function( event, ui ) {
+          // console.log(left,"1340")
+          //找到被插入的元素
+          $(this).find( "div" )
+          //从位置A拖动到位置B后，拖动前位置A的宽度由于元素个数超过100%，
+          // 拖后后元素个数不足，导致100%足够显示，所以要动态更新位置A的宽度
+          //20是提示插入的预留空间
+          let otherWidth=(dragDiv.parent().children().length-2)*30+20
+          // console.log(otherWidth,"drop") //40180
+          // console.log(divWidth,"drop") //40180
+          // console.log(dragDiv.parent().children(),"drop")
+          //滚动条显示
+          if(otherWidth<=divWidth){
+            // console.log("aaaa167")
+            dragDiv.parent().width("100%")
+          }else{
+            dragDiv.parent().width((otherWidth+20)/divWidth*100+"%")
+          }
+          //==================================================
+          dragDiv.css("top",0)
+          dragDiv.css("left",0)
+          dragDiv.css("visibility","visible")
+          //判断是在前面插入还是在后面插入===
+          if(left){
+            //前面插入
+            $(this).before(dragDiv)
+            // console.log("155555")
+          }else{
+            $(this).after(dragDiv)
+            // console.log("159999")
+          }
+          // console.log($(this)[0],"148")
+          //动态扩展========================
+          let trueWidth=$(this).parent().children().length*30+20
+          if(trueWidth>divWidth){
+            $(this).parent().width((trueWidth+20)/divWidth*100+"%")
+          }else {
+            // console.log("bbbb194")
+            $(this).parent().width("100%")
+          }
+          //================================
+          $(this).css("paddingLeft","")
+          $(this).css("paddingRight","")
+          //===========================
+        },
+
+      })
+
+    //向没有元素的区域，插入元素
+    //空行的情况下，插入一个元素
+    $(".innerdiv1").droppable({
+      drop: function( event, ui ) {
+        $(this).find( "div" )
+        dragDiv.css("top",0)
+        dragDiv.css("left",0)
+        dragDiv.css("visibility","visible")
+        if($(this).children().length===0){
+          $(this).append(dragDiv)
+        }
+      },
+    })
+    //拖拽圆end============================================
+
+  //  中间栏横向滚动======================================
+    //造数据
+    let dataNum=60
+    //数据宽 40
+    let datawidth=40
+    for(let i=0;i<dataNum;i++){
+      $("#div2inner1-inner").append("<div>"+(i+1)+"</div>")
+    }
+
+    // console.log(scrollwidth)
+    $("#div2inner1-inner").width(datawidth*dataNum)
+    // $("#div2inner1-main").width($("#div2inner1-all").width())
+    let shownum=33
+    //33表示 显示33个
+    $("#div2inner1-all").width(datawidth*shownum)
+    $("#div2inner1-main").width(datawidth*shownum)
+
+
+    //根据数目，动态调整滚动条大小
+    // $("#div2inner1-scrollInner").width(1/dataNum*$("#div2inner1-scroll").width())
+    $("#div2inner1-scrollInner").width(1/(shownum-5)*$("#div2inner1-scroll").width())
+    console.log($("#div2inner1-scrollInner").width()) //41
+    //滚动条占总宽的百分比
+    // let y=$("#div2inner1-scrollInner").width()/$("#div2inner1-scroll").width()*100
+    let y=100/(shownum-5)
+    console.log(y) //3
+    // let y=0
+
+    document.getElementById("div2inner1-main").onwheel=function(e){
+      e.preventDefault()
+      // console.log(this)
+      // let move=$("#div2inner1-scrollInner").width()
+      if(e.wheelDeltaY>0){
+        this.scrollLeft+=datawidth
+        // y+=move
+        // console.log(move,y)
+      }else{
+        this.scrollLeft-=datawidth
+        // y-=move
+        // console.log(22222)
+      }
+
+      // $("#div2inner1-main1").css("display",this.scrollLeft?"block":"none")
+      // $("#div2inner1-main2").css("display",this.scrollLeft===1350?"none":"block")
+      console.log(this.scrollLeft)
+
+      // let x=this.scrollLeft/40*(100/(dataNum-4))
+      // let x=this.scrollLeft/40*(100/dataNum)
+      //有两个不显示
+      let x=(this.scrollLeft/datawidth)*y
+      // let z=x-y
+      if(this.scrollLeft===0) x=0
+      console.log(this.scrollLeft/datawidth)
+      //滚动条滑动
+      $("#div2inner1-scrollInner").css("marginLeft",x+"%")
+      // $("#div2inner1-scrollInner").css("marginLeft",y+"px")
+
+
+      $("#div2inner1-number1Inner").text(this.scrollLeft/datawidth+1)
+      $("#div2inner1-number2Inner").text((dataNum-2)-this.scrollLeft/datawidth-1)
+    }
+
+
+  //中间栏横向滚动end=============================================
+  }
+</script>
+</body>
+</html>

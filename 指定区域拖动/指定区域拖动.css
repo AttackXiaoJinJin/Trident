@@ -73,7 +73,7 @@ td{
 #mainInner{
   position: relative;
 }
-.div1{
+.innerdiv1{
   width: 100%;
   height: 80px;
   border: 1px black solid;
@@ -89,23 +89,23 @@ td{
 
 
 
-.cd{
-  /*background:green !important;*/
-  border: 1px green solid !important;
-  /*margin-right:30px !important;*/
-}
+/*.cd{*/
+  /*!*background:green !important;*!*/
+  /*border: 1px green solid !important;*/
+  /*!*margin-right:30px !important;*!*/
+/*}*/
 
-.beforeDiv::before{
-  width:30px;
-  height:30px;
+/*.beforeDiv::before{*/
+  /*width:30px;*/
+  /*height:30px;*/
 
-}
+/*}*/
 
-.afterDiv::after{
-  width:30px;
-  height:30px;
+/*.afterDiv::after{*/
+  /*width:30px;*/
+  /*height:30px;*/
 
-}
+/*}*/
 
 .div1 .ui-selecting { background: #FECA40; }
 

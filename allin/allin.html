@@ -168,7 +168,6 @@
         <div id="div2inner1-all">
           <div id="div2inner1-main1">...
             <div id="div2inner1-number1">
-              <span id="div2inner1-number1Inner">0</span>
             </div>
           </div>
           <div id="div2inner1-main">
@@ -179,7 +178,6 @@
           </div>
           <div id="div2inner1-main2">...
             <div id="div2inner1-number2">
-              <span id="div2inner1-number2Inner">10</span>
             </div>
           </div>
           <div id="div2inner1-scroll">
@@ -202,7 +200,28 @@
       </div>
 
       <div id="div2inner2">
-
+        <div style="float: left;border-right: 5px gray solid;width: 50%">
+          <span class="span1">鼻科[17]</span>
+          <span class="span2">1</span>
+          <span class="span2">2</span>
+          <span class="span2">3</span>
+          <span class="span2">4</span>
+          <span class="span2">5</span>
+          <span class="span2">6</span>
+          <span class="span2">7</span>
+          <span class="span2">8</span>
+        </div>
+        <div style="float: left;margin-left: 5px;">
+          <span class="span1">鼻科[17]</span>
+          <span class="span2">1</span>
+          <span class="span2">2</span>
+          <span class="span2">3</span>
+          <span class="span2">4</span>
+          <span class="span2">5</span>
+          <span class="span2">6</span>
+          <span class="span2">7</span>
+          <span class="span2">8</span>
+        </div>
 
       </div>
 
@@ -210,7 +229,75 @@
     <!--蓝黄拖拽线-->
     <div id="drag2"></div>
     <!--黄-->
-    <div id="div3"></div>
+    <div id="div3">
+      <div id="div3-left">
+        <div id="div3-left-inner" style="position: relative">
+          <div id="div3-left-inner-top">
+            <ul>
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+              <li>d</li>
+              <li>e</li>
+              <li>f</li>
+              <li>g</li>
+            </ul>
+          </div>
+          <div id="div3-left-inner-bottom">
+            <div class="mainInner">
+              <div class="outerDiv1">
+                <div class="innerdiv4">
+                  <!--circle1是外面透明的圆，innerCircle1是里面蓝色的圆，
+                  这样嵌套是方便做插入提示
+                  -->
+                  <div class="circle4"><div class="innerCircle1">a</div></div>
+                  <div class="circle4"><div class="innerCircle1">b</div></div>
+                  <div class="circle4"><div class="innerCircle1">c</div></div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <div id="div3-right">
+        <div id="div3-right-inner" style="position: relative">
+          <div id="div3-right-inner-top">
+            <ul>
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>
+              <li>d</li>
+              <li>e</li>
+              <li>f</li>
+              <li>g</li>
+            </ul>
+          </div>
+
+          <div id="div3-left-inner-bottom">
+            <div class="mainInner">
+              <div class="outerDiv1">
+                <div class="innerdiv4">
+                  <!--circle1是外面透明的圆，innerCircle1是里面蓝色的圆，
+                  这样嵌套是方便做插入提示
+                  -->
+                  <div class="circle4"><div class="innerCircle1">a</div></div>
+                  <div class="circle4"><div class="innerCircle1">b</div></div>
+                  <div class="circle4"><div class="innerCircle1">c</div></div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
   </div>
 
 
@@ -293,28 +380,34 @@
     //折叠end======================================================
 
   //  拖拽圆start================================================
+    drag("innerdiv1","circle1","table")
+    drag("innerdiv4","circle4","#div3")
+
+    function drag(divname,circlename,stop) {
     //拖拽的元素
     let dragDiv=null
     //在前面插还是在后面插
     let left=false
     //该行的宽度，用于动态改变滚动条
     //100%的宽度
-    let divWidth=$(".innerdiv1").width()
+    let divWidth=$("."+divname).width()
     // console.log(divWidth)
 
-    for(let i=0;i<30;i++){
-      $(".innerdiv1").append("<div class='circle1'><div class='innerCircle1'>"+i+9+"</div></div>")
+    for(let i=0;i<10;i++){
+      $("."+divname).append("<div class="+circlename+"><div class='innerCircle1'>"+i+9+"</div></div>")
     }
 
     //获取div行上的元素个数
     // ($(".div1").children().length-2)*30+20
-    let nowWidth=($(".innerdiv1").children().length/3)*30+20
-    // console.log($(".div1").children().length)
-    $(".innerdiv1").width(nowWidth/divWidth*100+"%")
+    let nowWidth=($("."+divname).children().length/$("."+divname).length)*30+40
+    // console.log(nowWidth,divWidth,'398')
+    // console.log($("."+divname).length,'400')
+    $("."+divname).width(nowWidth/divWidth*100+"%")
 
     //拖动父圆
-    $(".circle1").draggable({
-      containment: "table",
+    $("."+circlename).draggable({
+      //约束运动
+      containment: stop,
       revert: 'invalid',
       opacity: 0.7,
       start:function(){
@@ -375,8 +468,7 @@
           //20是提示插入的预留空间
           let otherWidth=(dragDiv.parent().children().length-2)*30+20
           // console.log(otherWidth,"drop") //40180
-          // console.log(divWidth,"drop") //40180
-          // console.log(dragDiv.parent().children(),"drop")
+
           //滚动条显示
           if(otherWidth<=divWidth){
             // console.log("aaaa167")
@@ -416,7 +508,7 @@
 
     //向没有元素的区域，插入元素
     //空行的情况下，插入一个元素
-    $(".innerdiv1").droppable({
+    $("."+divname).droppable({
       drop: function( event, ui ) {
         $(this).find( "div" )
         dragDiv.css("top",0)
@@ -427,6 +519,8 @@
         }
       },
     })
+
+    }
     //拖拽圆end============================================
 
   //  中间栏横向滚动======================================
@@ -437,7 +531,8 @@
     let shownum=33
     //33表示 显示33个
     //初始化文字
-    $("#div2inner1-number2Inner").text(dataNum-shownum+1)
+    // $("#div2inner1-number2Inner").text(dataNum-shownum+1)
+    $("#div2inner1-number2").text(dataNum-shownum+1)
 
     for(let i=0;i<dataNum;i++){
       $("#div2inner1-inner").append("<div>"+(i+1)+"</div>")
@@ -475,7 +570,7 @@
 
       $("#div2inner1-main1").css("display",this.scrollLeft?"block":"none")
       $("#div2inner1-main2").css("display",this.scrollLeft===datawidth*(shownum-6)?"none":"block")
-      console.log(this.scrollLeft)
+      // console.log(this.scrollLeft)
 
       // let x=this.scrollLeft/40*(100/(dataNum-4))
       // let x=this.scrollLeft/40*(100/dataNum)
@@ -487,13 +582,16 @@
       //滚动条滑动
       $("#div2inner1-scrollInner").css("marginLeft",x+"%")
 
-      $("#div2inner1-number1Inner").text(this.scrollLeft/datawidth+1)
+      $("#div2inner1-number1").text(this.scrollLeft/datawidth+1)
       // console.log(shownum,this.scrollLeft)
-      $("#div2inner1-number2Inner").text(shownum-5-this.scrollLeft/datawidth)
+      // $("#div2inner1-number2Inner").text(shownum-5-this.scrollLeft/datawidth)
+      $("#div2inner1-number2").text(shownum-5-this.scrollLeft/datawidth)
     }
 
 
   //中间栏横向滚动end=============================================
+
+
   }
 </script>
 </body>

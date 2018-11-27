@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e036338-b1ec-4751-9b2b-5a55a681bb07" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/allin/allin.css" beforeDir="false" afterPath="$PROJECT_DIR$/allin/allin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/allin/allin.html" beforeDir="false" afterPath="$PROJECT_DIR$/allin/allin.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,9 +20,13 @@
       <file leaf-file-name="allin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/allin/allin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="439" column="56" selection-start-line="439" selection-start-column="56" selection-end-line="439" selection-end-column="56" />
+            <state relative-caret-position="370">
+              <caret line="593" lean-forward="true" selection-start-line="593" selection-end-line="593" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#910#1922#0" />
                 <element signature="e#1341#1604#0" />
                 <element signature="e#1953#2345#0" />
@@ -34,8 +39,8 @@
       <file leaf-file-name="allin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/allin/allin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="188" column="16" selection-start-line="188" selection-start-column="16" selection-end-line="188" selection-end-column="16" />
+            <state relative-caret-position="2733">
+              <caret line="371" column="17" selection-start-line="371" selection-start-column="17" selection-end-line="371" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -76,13 +81,16 @@
       <find>beforeDiv</find>
       <find>div1</find>
       <find>mainInner</find>
-      <find>innerdiv1</find>
       <find>dis</find>
       <find>cursor</find>
       <find>div2</find>
       <find>inner</find>
       <find>div2inner1-main</find>
       <find>div2inner1-inner</find>
+      <find>div2inner1-number2Inner</find>
+      <find>div2inner1-number1Inner</find>
+      <find>outerDiv1</find>
+      <find>innerdiv1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,7 +127,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -207,15 +215,15 @@
       <workItem from="1540190892416" duration="73449000" />
       <workItem from="1540516780622" duration="7005000" />
       <workItem from="1540785493056" duration="642000" />
-      <workItem from="1543195283802" duration="21001000" />
+      <workItem from="1543195283802" duration="33925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143419000" />
+    <option name="totallyTimeSpent" value="156343000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19814447" />
@@ -522,16 +530,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/allin/allin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="188" column="16" selection-start-line="188" selection-start-column="16" selection-end-line="188" selection-end-column="16" />
+        <state relative-caret-position="2733">
+          <caret line="371" column="17" selection-start-line="371" selection-start-column="17" selection-end-line="371" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allin/allin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="439" column="56" selection-start-line="439" selection-start-column="56" selection-end-line="439" selection-end-column="56" />
+        <state relative-caret-position="370">
+          <caret line="593" lean-forward="true" selection-start-line="593" selection-end-line="593" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#910#1922#0" />
             <element signature="e#1341#1604#0" />
             <element signature="e#1953#2345#0" />

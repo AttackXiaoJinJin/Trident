@@ -252,7 +252,7 @@
                   -->
                   <div class="circle4"><div class="innerCircle1">a</div></div>
                   <div class="circle4"><div class="innerCircle1">b</div></div>
-                  <div class="circle4"><div class="innerCircle1">c</div></div>
+                  <div class="circle4" data-first="1"><div class="innerCircle1">c</div></div>
                 </div>
               </div>
             </div>
@@ -277,7 +277,7 @@
             </ul>
           </div>
 
-          <div id="div3-left-inner-bottom">
+          <div id="div3-right-inner-bottom">
             <div class="mainInner">
               <div class="outerDiv1">
                 <div class="innerdiv4">
@@ -386,15 +386,20 @@
     function drag(divname,circlename,stop) {
     //拖拽的元素
     let dragDiv=null
+    let dragDivLeft=0
     //在前面插还是在后面插
-    let left=false
+    // let left=false
     //该行的宽度，用于动态改变滚动条
     //100%的宽度
     let divWidth=$("."+divname).width()
     // console.log(divWidth)
 
     for(let i=0;i<10;i++){
-      $("."+divname).append("<div class="+circlename+"><div class='innerCircle1'>"+i+9+"</div></div>")
+        $("."+divname).append("<div class="+circlename+"><div class='innerCircle1'>"+i+9+"</div></div>")
+      if(i===9){
+        $("."+divname).append("<div style='visibility:hidden;' class="+circlename+"><div class='innerCircle1'></div></div>")
+      }
+
     }
 
     //获取div行上的元素个数
@@ -424,10 +429,15 @@
         // $("body table tr td").css("background","aqua")
         // $(".mainInner").css("background","white")
         dragDiv=$(this)
+        dragDivLeft=$(this).parent().children().last().css('left')
         //判断是前插还是后插
-        left=$(this).parent().children().last().css('left')
-        left=+left.substring(0,left.length-2)<0
-        // console.log(left,"drag")
+        // left=$(this).parent().children().last().css('left')
+        // left=$(this).parent().children().last().css('data-first')
+        // console.log($(this).parent(),"drag429")
+        // left=+left.substring(0,left.length-2)<0
+        // left=(left==="1")
+
+        // console.log(left,"drag431")
       },
       helper:
         function(event) {
@@ -446,12 +456,21 @@
       .droppable({
         //拖拽元素在其他元素之上，其他元素的样式
         over: function(event,ui) {
-          if(left){
+          // if(left){
+          // let thisLeft=$(this).css('left')
+          // console.log(dragDivLeft,"拖动的div")
+          // console.log(thisLeft,$(this),"等着的div")
+          // if($(this).attr("data-first")&&dragDivLeft<thisLeft){
             //父圆的padding设置，起到提示可插入的效果
+            //后插提示
+            // $(this).css("paddingRight","20px")
+            // console.log("111111")
+          // }else{
+          //   console.log("22222")
+            //前插提示
             $(this).css("paddingLeft","20px")
-          }else{
-            $(this).css("paddingRight","20px")
-          }
+
+          // }
         },
         out: function(event,ui) {
           //不在悬浮，不显示插入效果
@@ -481,14 +500,18 @@
           dragDiv.css("left",0)
           dragDiv.css("visibility","visible")
           //判断是在前面插入还是在后面插入===
-          if(left){
+          console.log($(this),"drop488")
+          // if(left){
+          // if($(this).attr("data-first")){
             //前面插入
             $(this).before(dragDiv)
+            // dragDiv.attr("data-first","1")
+            // $(this).attr("data-first","")
             // console.log("155555")
-          }else{
-            $(this).after(dragDiv)
+          // }else{
+          //   $(this).after(dragDiv)
             // console.log("159999")
-          }
+          // }
           // console.log($(this)[0],"148")
           //动态扩展========================
           let trueWidth=$(this).parent().children().length*30+20
@@ -528,7 +551,7 @@
     let dataNum=60
     //数据宽 40
     let datawidth=40
-    let shownum=33
+    let shownum=29
     //33表示 显示33个
     //初始化文字
     // $("#div2inner1-number2Inner").text(dataNum-shownum+1)
@@ -550,7 +573,7 @@
     // console.log($("#div2inner1-scrollInner").width()) //41
     //滚动条占总宽的百分比
     // let y=$("#div2inner1-scrollInner").width()/$("#div2inner1-scroll").width()*100
-    let y=100/(shownum-5)
+    let y=100/(dataNum-shownum+1)
     // console.log(y) //3
     // let y=0
 
@@ -569,7 +592,7 @@
       }
 
       $("#div2inner1-main1").css("display",this.scrollLeft?"block":"none")
-      $("#div2inner1-main2").css("display",this.scrollLeft===datawidth*(shownum-6)?"none":"block")
+      $("#div2inner1-main2").css("display",this.scrollLeft===datawidth*(dataNum-shownum)?"none":"block")
       // console.log(this.scrollLeft)
 
       // let x=this.scrollLeft/40*(100/(dataNum-4))
@@ -583,9 +606,8 @@
       $("#div2inner1-scrollInner").css("marginLeft",x+"%")
 
       $("#div2inner1-number1").text(this.scrollLeft/datawidth+1)
-      // console.log(shownum,this.scrollLeft)
-      // $("#div2inner1-number2Inner").text(shownum-5-this.scrollLeft/datawidth)
-      $("#div2inner1-number2").text(shownum-5-this.scrollLeft/datawidth)
+
+      $("#div2inner1-number2").text(dataNum-shownum+1-this.scrollLeft/datawidth)
     }
 
 

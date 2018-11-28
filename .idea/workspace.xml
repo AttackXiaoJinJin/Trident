@@ -20,8 +20,8 @@
       <file leaf-file-name="allin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/allin/allin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="593" lean-forward="true" selection-start-line="593" selection-end-line="593" />
+            <state relative-caret-position="314">
+              <caret line="399" column="36" selection-start-line="399" selection-start-column="36" selection-end-line="399" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="allin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/allin/allin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2733">
-              <caret line="371" column="17" selection-start-line="371" selection-start-column="17" selection-end-line="371" selection-end-column="17" />
+            <state relative-caret-position="409">
+              <caret line="139" column="12" selection-start-line="139" selection-start-column="12" selection-end-line="139" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -85,12 +85,13 @@
       <find>cursor</find>
       <find>div2</find>
       <find>inner</find>
-      <find>div2inner1-main</find>
       <find>div2inner1-inner</find>
       <find>div2inner1-number2Inner</find>
       <find>div2inner1-number1Inner</find>
       <find>outerDiv1</find>
       <find>innerdiv1</find>
+      <find>div2inner1-main</find>
+      <find>left</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,7 +128,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -215,15 +216,15 @@
       <workItem from="1540190892416" duration="73449000" />
       <workItem from="1540516780622" duration="7005000" />
       <workItem from="1540785493056" duration="642000" />
-      <workItem from="1543195283802" duration="33925000" />
+      <workItem from="1543195283802" duration="46058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156343000" />
+    <option name="totallyTimeSpent" value="168476000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19814447" />
@@ -530,15 +531,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/allin/allin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2733">
-          <caret line="371" column="17" selection-start-line="371" selection-start-column="17" selection-end-line="371" selection-end-column="17" />
+        <state relative-caret-position="409">
+          <caret line="139" column="12" selection-start-line="139" selection-start-column="12" selection-end-line="139" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/allin/allin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="593" lean-forward="true" selection-start-line="593" selection-end-line="593" />
+        <state relative-caret-position="314">
+          <caret line="399" column="36" selection-start-line="399" selection-start-column="36" selection-end-line="399" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
